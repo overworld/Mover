@@ -7,11 +7,11 @@ class LandScreen extends React.Component {
             <View style={styles.MainContainer }>
                 <Image
                     style={{flex:1, height: undefined, width: undefined}}
-                    source={require('C:\\Users\\lordo\\WebstormProjects\\Mover\\assets\\logo.png')}
+                    source={require('../assets/logo.png')}
                     resizeMode="contain"
                 />
                 <View>
-                <Button style={{flex: 2, marginBottom: 30}} title='Ce connecter' onPress={() => {}}/>
+                <Button style={{flex: 2, marginBottom: 30}} title='Se connecter' onPress={() => {}}/>
                 <Button style={{flex: 2, marginBottom: 30}} title="S'inscrire" onPress={() => {}}/>
                 </View>
             </View>
