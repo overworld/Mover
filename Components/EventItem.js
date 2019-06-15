@@ -7,7 +7,7 @@ class EventItem extends React.Component {
             <View style={styles.main_container}>
                 <Image
                     style={styles.image}
-                    source={{uri: "../assets/BsoN209EVK0EiHQDCs2Cfg.XmvlPQeNpSlK5rZlvkEPbg.adc620.jpg"}}
+                    source={{uri: "C:\\\\Users\\\\lordo\\\\WebstormProjects\\\\Mover\\\\assets\\\\logo.png"}}
                 />
                 <View style={styles.content_container}>
                     <View style={styles.header_container}>
