@@ -3,7 +3,10 @@ import Events from '../Helpers/EventData'
 import {StyleSheet, View, TextInput, Button, FlatList, Text} from 'react-native'
 import EventItem from "./EventItem";
 
+
+
 class Search extends React.Component {
+
     render() {
         return (
             <View style={styles.MainContainer}>
@@ -14,6 +17,7 @@ class Search extends React.Component {
                     keyExtractor={(item) => item.id.toString()}
                     renderItem={({item}) => <EventItem event={item}/>}
                 />
+                <AppSearch/>
             </View>
 
         )

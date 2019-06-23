@@ -1,14 +1,5 @@
-import { createStackNavigator , createAppContainer} from 'react-navigation'
+import { createMaterialTopTabNavigator , createAppContainer} from 'react-navigation'
 import Search from '../Components/Search'
-
-const SearchStackNavigator = createStackNavigator({
-    Search: {
-        screen: Search,
-        navigationOptions: {
-            title: 'Rechercher'
-        }
-    }
-});
+import Profil from '../Components/Profil'
 
 
-export default createAppContainer(SearchStackNavigator)
