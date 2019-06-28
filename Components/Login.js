@@ -7,10 +7,10 @@ class Login extends React.Component {
             <View style={styles.MainContainer}>
                 <View style = {styles.LogoContainer}>
                     <Image style={styles.logo}
-                           source={'C:\\Users\\lordo\\WebstormProjects\\Mover\\assets\\logo.png'}>
+                           source={require('../assets/logo.png')}>
                     </Image>
-                    <text style={styles.title}> Adresse Email</text>
-                    <text style={styles.title}> Mot de passe</text>
+                    <TextInput style={styles.title} placeholder='Adresse Email' />
+                    <TextInput style={styles.title} placeholder='Mot de passe' />
 
                 </View>
             </View>
@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
         height:56,
     },
     title: {
-        code: '#FF204C',
+        color: '#FF204C',
         textAlign: 'center',
-        fontsize: 18
+        fontSize: 18
     },
 
 });
