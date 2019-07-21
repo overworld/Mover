@@ -1,27 +1,21 @@
 import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import Search from './Components/Search'
-import Navigator from "./Components/Navigator";
+import Login from './Components/Login'
+import LandScreen from './Components/LandScreen'
+import Navigation from './Navigation/Navigation'
+
+
 
 export default class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { loading: true };
-    }
-
-    async componentWillMount() {
-        await Expo.Font.loadAsync({
-            Roboto: require("native-base/Fonts/Roboto.ttf"),
-            Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
-        });
-        this.setState({ loading: false });
-    }
-
-
-    render() {
-        return (
-            <Navigator/>
-        );
-    }
+  render() {
+    return (
+        <Navigation/>
+        //<LandScreen/>
+        //<Search/>
+        //<Login/>
+    );
+  }
 }
-
+    
 
