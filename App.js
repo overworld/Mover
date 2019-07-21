@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './Components/Search'
+import Login from './Components/Login'
 import Navigator from "./Components/Navigator";
 
 export default class App extends React.Component {
@@ -19,7 +19,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <Navigator/>
+            <Login/>
         );
     }
 }
