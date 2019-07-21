@@ -1,27 +1,29 @@
 import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import Search from './Components/Search'
-import Navigator from "./Components/Navigator";
+import Login from './Components/Login'
+import Navigation from './Navigation/Navigation'
+import Profil from './Components/Profil'
 
-export default class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { loading: true };
-    }
+import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 
-    async componentWillMount() {
-        await Expo.Font.loadAsync({
-            Roboto: require("native-base/Fonts/Roboto.ttf"),
-            Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
-        });
-        this.setState({ loading: false });
-    }
+var RouteConfigs;
 
+var MaterialBottomTabNavigatorConfig;
 
-    render() {
-        return (
-            <Navigator/>
-        );
-    }
-}
+createMaterialBottomTabNavigator (
+    RouteConfigs = {
+      Recherche: { screen: Search},
+      Profil: { screen: Profil },
+},
+    MaterialBottomTabNavigatorConfig = {
+      initialRouteName: 'Recherche',
+      activeColor: '#f0edf6',
+      inactiveColor: '#3e2465',
+      barStyle: { backgroundColor: '#694fad' }}
+);
+
+export default class createMaterialBottomTabNavigator extends React.Component{
 
 
+};
