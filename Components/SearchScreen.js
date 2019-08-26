@@ -1,8 +1,11 @@
 import React from 'react'
-import {StyleSheet, View, Image, Button, Text, TextInput, FlatList} from 'react-native'
+import {StyleSheet, View, Image, Text, TextInput, FlatList} from 'react-native'
 import Navigator from "./Navigator";
 import Events from "../Helpers/EventData";
 import EventItem from "./EventItem";
+import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
+import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
+import {Container, Header, Item, Input, Icon, Button, Content, Card, CardItem, Body } from "native-base";
 
 class SearchScreen extends React.Component {
     constructor(props) {
@@ -16,14 +19,76 @@ class SearchScreen extends React.Component {
     render() {
         return (
             <View style={styles.main_container}>
-                <TextInput style={styles.textinput} placeholder='Rechercher un évènement'/>
-                <Button title='Rechercher' onPress={() => {
-                }}/>
-                <FlatList
-                    data={Events}
-                    keyExtractor={(item) => item.id.toString()}
-                    renderItem={({item}) => <EventItem event={item}/>}
-                />
+                <Container >
+                    <Header style={styles.searchbar} searchBar rounded>
+                        <Item>
+                            <Icon name="ios-search" />
+                            <Input placeholder="Rechercher" />
+                        </Item>
+                        <Button transparent>
+                            <Text>Rechercher</Text>
+                        </Button>
+                    </Header>
+                    <Text style={styles.little}>Dernières recherches</Text>
+                    <Text style={styles.medium}>Concert</Text>
+                    <Text style={styles.medium}>bar à vin</Text>
+                    <Text style={styles.medium}>compétition</Text>
+
+
+
+                </Container>
+                <View style={styles.row}>
+                <Content >
+                    <Card >
+                        <CardItem style={styles.carte}>
+                            <Body >
+                                <Text style={{color: "white"}}>
+                                    Bar
+                                </Text>
+                                <Text style={{color: "grey", fontSize:11}}>
+                                    112
+                                </Text>
+                            </Body>
+                        </CardItem>
+                    </Card>
+                    <Card >
+                        <CardItem style={styles.carte}>
+                            <Body >
+                                <Text style={{color: "white"}}>
+                                    Boites de nuit
+                                </Text>
+                                <Text style={{color: "grey", fontSize:11}}>
+                                    70
+                                </Text>
+                            </Body>
+                        </CardItem>
+                    </Card>
+                    <Card >
+                        <CardItem style={styles.carte}>
+                            <Body >
+                                <Text style={{color: "white"}}>
+                                    Concert
+                                </Text>
+                                <Text style={{color: "grey", fontSize:11}}>
+                                    29
+                                </Text>
+                            </Body>
+                        </CardItem>
+                    </Card>
+                    <Card >
+                        <CardItem style={styles.carte}>
+                            <Body >
+                                <Text style={{color: "white"}}>
+                                    Sport
+                                </Text>
+                                <Text style={{color: "grey", fontSize:11}}>
+                                    52
+                                </Text>
+                            </Body>
+                        </CardItem>
+                    </Card>
+                </Content>
+                </View>
             </View>
         )
     }
@@ -32,43 +97,38 @@ class SearchScreen extends React.Component {
 
 const styles = StyleSheet.create({
     main_container: {
+        marginTop:'6%',
+        flex: 1,
         height: 190,
-        flexDirection: "row",
 
     },
-    content_container: {
-        flex: 1,
-        margin: 5
-    },
-    image: {
-        width: 120,
-        height: 180,
-        margin: 5,
-        backgroundColor: 'gray'
+
+    carte:{
+      backgroundColor: "#170F25",
     },
 
-    name_text: {
-        fontWeight: 'bold',
-        fontSize: 18,
-        flex: 1,
-        flexWrap: 'wrap',
-        paddingRight: 5
+    textcarte:{
+        color:"white",
     },
-    price:{
-        fontWeight: 'bold',
-        fontSize: 26,
-        color: '#666666'
-    },
-    theme: {
+
+    row:{
+        flexDirection: 'row',
 
     },
-    date: {
 
+    little: {
+        marginLeft: 10,
+        fontSize: 12,
+        marginBottom: 6,
     },
-    description: {
-        textAlign: 'left',
-        fontSize: 12
+    medium: {
+        marginLeft: 8,
+        fontSize: 14,
     },
+    searchbar:{
+      backgroundColor:"#170F25",
+    },
+
     date_container: {
         flex: 1
     },
