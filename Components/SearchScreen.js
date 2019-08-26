@@ -1,5 +1,21 @@
 import React from 'react'
-import {StyleSheet, View, Image, Button, Text, TextInput, FlatList} from 'react-native'
+import {
+    Container,
+    Header,
+    Item,
+    Input,
+    Icon,
+    Button,
+    Text,
+    CardItem,
+    Left,
+    Content,
+    Body,
+    H2,
+    Right,
+    Card
+} from 'native-base';
+import {StyleSheet, View, Image, TextInput, FlatList} from 'react-native';
 import Navigator from "./Navigator";
 import Events from "../Helpers/EventData";
 import EventItem from "./EventItem";
@@ -14,16 +30,63 @@ class SearchScreen extends React.Component {
     }
 
     render() {
+
+        const ShowEvents =  <Container>
+            <Content searchBar rounded style={{
+                marginTop: '10%', borderRadius: 20
+            }}>
+                <Item style={{
+                    justifyContent: 'center',
+                    alignItems: 'center', backgroundColor: '#170f25', color: '#ffffff'
+                }}>
+                    <Icon style={{color: '#ffffff'}} name="ios-search"/>
+                    <Input style={{color: '#ffffff'}} placeholder="Search"/>
+                    <Icon style={{color: '#ffffff'}} name="ios-people"/>
+                </Item>
+                <Content>
+                    <CardItem style={{
+                        backgroundColor: '#170f25',
+                        borderRadius: 50,
+                        height: 150,
+                        width: '40%',
+                        marginTop: 50
+                    }}>
+                        <Body>
+                        <Text style={{color: '#ffffff'}}>Bars {'\n'}</Text>
+                        <Text style={{color: 'gray'}}>26</Text>
+                        </Body>
+                    </CardItem>
+                    <CardItem style={{
+                        backgroundColor: '#170f25',
+                        borderRadius: 50,
+                        flex: 1,
+                        height: 150,
+                        width: '40%',
+                        marginTop: 50
+                    }}>
+                        <Body>
+                        <Text style={{color: '#ffffff'}}>Concerts {'\n'}</Text>
+                        <Text style={{color: 'gray'}}>48</Text>
+                        </Body>
+                    </CardItem>
+                    <CardItem style={{
+                        backgroundColor: '#170f25',
+                        borderRadius: 50,
+                        height: 150,
+                        width: '40%',
+                        marginTop: 50
+                    }}>
+                        <Body>
+                        <Text style={{color: '#ffffff'}}>Boites de nuit {'\n'}</Text>
+                        <Text style={{color: 'gray'}}>1200</Text>
+                        </Body>
+                    </CardItem>
+                </Content>
+            </Content>
+        </Container>;
         return (
             <View style={styles.main_container}>
-                <TextInput style={styles.textinput} placeholder='Rechercher un évènement'/>
-                <Button title='Rechercher' onPress={() => {
-                }}/>
-                <FlatList
-                    data={Events}
-                    keyExtractor={(item) => item.id.toString()}
-                    renderItem={({item}) => <EventItem event={item}/>}
-                />
+
             </View>
         )
     }
@@ -54,17 +117,13 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         paddingRight: 5
     },
-    price:{
+    price: {
         fontWeight: 'bold',
         fontSize: 26,
         color: '#666666'
     },
-    theme: {
-
-    },
-    date: {
-
-    },
+    theme: {},
+    date: {},
     description: {
         textAlign: 'left',
         fontSize: 12
