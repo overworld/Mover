@@ -72,7 +72,7 @@ class Search extends React.Component {
     }
 
     componentWillMount() {
-        this.createUser();
+        // this.createUser();
     }
 
 

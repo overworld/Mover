@@ -1,0 +1,44 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-dev-tools -g
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Users\flori\AppData\Local\Android\Sdk\platform-tools;D:\wamp64\bin\php\php7.2.10;C:\Users\flori\AppData\Roaming\npm;D:\wamp64\bin\php\php7.3.1;C:\Program Files\Sublime Text 3;C:\Program Files\TortoiseGit\bin;D:\Program Files\OpenSSL-Win64\bin;C:\Users\flori\AppData\Local\Microsoft\WindowsApps;C:\Users\flori\AppData\Roaming\Composer\vendor\bin;D:\wamp64\bin\php\php7.2.10;C:\Users\flori\AppData\Local\Yarn\bin;C:\Users\flori\AppData\Roaming\npm;D:\Program Files\Docker Toolbox
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  11.3.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'D:\wamp64\www\mover\node_modules\.cache\@babel\register'
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "expo": "^32.0.0",
+      "react": "16.5.0",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+      "react-navigation": "^3.11.0"
+    },
+    "devDependencies": {
+      "babel-preset-expo": "^5.0.0"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
